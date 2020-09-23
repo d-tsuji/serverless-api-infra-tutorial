@@ -4,7 +4,7 @@ data "aws_iam_policy_document" "example_api_policy" {
     principals {
       type = "*"
       identifiers = [
-        "*"]
+      "*"]
     }
     actions = [
       "execute-api:Invoke"
@@ -22,7 +22,7 @@ data "aws_iam_policy_document" "example_lambda" {
       "dynamodb:*"
     ]
     resources = [
-      "*"]
+    "*"]
   }
   statement {
     effect = "Allow"
@@ -32,6 +32,6 @@ data "aws_iam_policy_document" "example_lambda" {
       "logs:PutLogEvents"
     ]
     resources = [
-      "arn:aws:logs:*:*:*"]
+    "arn:aws:logs:*:*:*"]
   }
 }
